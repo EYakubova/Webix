@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="defaultpages" namespace="/" extends="struts-default">
+        <action name="index">
+        	<result>/index.jsp</result>
+    	</action>
+    	<action name="upcoming">
+	        <result>/index.jsp</result>
+    	</action>
+    	<action name="contacts">
+        	<result>/contacts.jsp</result>
+    	</action>
+    	<action name="event" class="com.myapp.action.EventAction" method="getEventById">
+			<result>/event.jsp</result>
+		</action>
+		<action name="add">
+    		<result>/add.jsp</result>
+		</action>
+    </package>
+    <package name="default" namespace="/" extends="json-default">
+	    <action name="events" class="com.myapp.action.EventAction" method="getEvents">
+	        <result type="json" />
+	    </action>
+	    <action name="speakers" class="com.myapp.action.SpeakerAction" method="getSpeakers">
+	        <result type="json" />
+	    </action>
+	    <action name="lastSpeakers" class="com.myapp.action.SpeakerAction" method="getLastSpeakers">
+	        <result type="json" />
+	    </action>
+	    <action name="saveEvent" class="com.myapp.action.SaveEventAction" method="saveEvent">
+    		<result type="json" />
+		</action>
+		<action name="saveSpeaker" class="com.myapp.action.SaveSpeakerAction" method="saveSpeaker">
+    		<result type="json" />
+		</action>
+	</package>
+</struts>
