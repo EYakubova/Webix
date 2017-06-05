@@ -9,7 +9,8 @@ import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class EventAction extends ActionSupport {
-
+	////
+	
 	private List<Event> data = new ArrayList<Event>();
 	private String eventId;
 	private Event event = null;
