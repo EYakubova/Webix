@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class EventAction extends ActionSupport {
 	////
-	
+	//Second commit
 	private List<Event> data = new ArrayList<Event>();
 	private String eventId;
 	private Event event = null;
