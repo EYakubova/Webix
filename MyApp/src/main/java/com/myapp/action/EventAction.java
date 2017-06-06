@@ -22,7 +22,6 @@ public class EventAction extends ActionSupport {
 		} else {
 			return Action.ERROR;
 		}
-		
 	}
 	
 	public String getEvents() {
